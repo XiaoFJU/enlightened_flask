@@ -1,0 +1,17 @@
+"""
+    Config file control DevOps environment, using different config setting in
+    different environment. please dont commit your config.py file.
+"""
+
+# default config
+class BaseConfig(object):
+    DEBUG = True
+    SECRET_KEY = 'supernekokoko'
+
+# development config
+class DevelopmentConfig(BaseConfig):
+    DEBUG = True
+
+# production config
+class ProductionConfig(BaseConfig):
+    DEBUG = False
